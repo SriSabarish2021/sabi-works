@@ -1,0 +1,122 @@
+'''import math as mat
+print(mat.sqrt(2))
+print(mat.floor(2.55))
+print(mat.factorial(4))
+print(mat.pow(4,6))
+print(mat.log10(4))
+r=5
+print(2*(mat.factorial(5)*r))
+
+try:
+    a = 10/0
+except Exception as s:
+    print(s)
+else:
+    print(a)
+finally:
+    print('sabiakchu')
+
+try:
+    print(a)
+except Exception as s:
+    print("Name 'A' i s not  defined :")
+
+try:
+    print(10/0)
+except Exception as s:
+    print("it is a Exception")
+
+try:
+    file=open("sri.py")
+    print('file here')
+except FileNotFoundError as r:
+    print('no file found')
+else:
+    print(file.read())
+
+try:
+    a=10/0
+    print("can be divide")
+    b=[10,20,30,40,50,60]
+    print(b[11])
+except ZeroDivisionError:
+    print("can't be divide")
+except IndexError :
+    print('value not found')
+
+
+nums = {
+  1: "one",
+  2: "two",
+  3: "three",
+}
+print(1 in nums)
+print("three" in nums)
+print(4 not in nums)
+
+pairs = {
+   1: "apple",
+   "orange": [2, 3, 4], 
+   True: False, 
+   12: "True",
+}
+
+print(pairs.get("orange"))
+print(pairs.get(7, 42))
+print(pairs.get(12345, "not found"))
+
+fib = {1: 1, 2: 1, 3: 2, 4: 3}
+print(fib.get(4, 0) + fib.get(7, 5))
+
+
+
+
+
+my_tuple = "one", "two", "three"
+print(my_tuple[0])
+
+a, b, *c, d = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(a)
+print(b)
+print(c)
+print(d)'''
+'''
+num_set = {1, 2, 3, 4, 5}
+
+print(num_set (2))'''
+
+
+'''
+nums = {1, 2, 1, 3, 1, 4, 5, 6}
+print(nums)
+nums.add(-7)
+nums.remove(3)
+print(nums)
+'''
+
+first = {1, 2, 3, 4, 5, 6}
+second = {4, 5, 6, 7, 8, 9}
+
+print(first | second)
+print(first & second)
+print(first - second)
+print(second - first)
+print(first ^ second)
+
+a = {1, 2, 3}
+b = {0, 3, 4, 5}
+print(a & b)
+
+cubes = [i**3 for i in range(5)]
+
+print(cubes)
+
+nums = [i*2 for i in range(10)]
+print(nums)
+
+evens=[i**2 for i in range(10) if i**2 % 2 == 0]
+
+print(evens)
+
+a = [3**i for i in range(20)   3 % i==0]
+print(a)

@@ -1,0 +1,318 @@
+class car():
+    pass
+
+print(type(car))
+a=10
+print(type(a))
+swift=car()
+print(type(swift))
+print(isinstance(swift,car))
+
+class students():
+    pass
+    name='sabi'
+    age='20'
+
+print(students.age)
+print(getattr(students,'name'))
+
+setattr(students,'gender','male')
+print(students.gender)
+setattr(students,'year','2024')
+print(getattr(students,'year'))
+print(students.__dict__)
+del (students.year)
+print(students.__dict__)
+new=students()
+
+
+
+class swift():
+    brand="saak"
+new=swift()
+print(swift.brand)
+print(swift.__dict__)
+print(new.__dict__)
+print(getattr(new,'brand'))
+new.item= 'engine'
+print(new.item)
+print(new.brand)
+
+new2=new
+new2.thing="money"
+print(new2.thing)
+print(new2.brand)
+
+class students():
+    name="ram"
+    age=21
+    
+    def myself():
+        print("name is :" ,students.name)
+        print("age is : " , students.age)
+students.myself()
+
+
+class sabi():
+    name='sabarish'
+    age=20
+
+print(sabi.name)
+
+obj=sabi()
+print(obj.__dict__)
+setattr(obj,'name','akchu')
+print(obj.name)
+print(obj.age)
+
+print(obj.__dict__)
+setattr(obj,'age',19)
+print(obj.age)
+print(type(obj.age))
+
+class student():
+    name="sabarish"
+    age=25
+
+    def sabi():
+        print('Name is :', student.name)
+        print('Age is :', student.age)
+
+student.sabi()
+
+print(student.__dict__)
+print(getattr(student,'sabi'))
+
+class student():
+    name="sabarish"
+    age=25
+
+    def sabi(self,gender):
+        print('Name is :', student.name)
+        print('Age is :', student.age)
+        print('Gender is :', gender)
+o=student()
+
+student.sabi(o)
+
+student.sabi(o,'male')
+
+class student():
+    def __init__(self,gender):
+        print('this is a name')
+        self.gender=gender
+ 
+    
+     
+
+o=student("male")
+print(o.gender)
+
+
+import datetime as dt
+current=dt.datetime.now()
+ourday=dt.datetime(2023,12,15)
+print(current-ourday)
+
+
+class goa:
+    name=" "
+    drink=' '
+    def party(self):
+        print("let's fun")
+    def beach(self):
+        print("enjoy")
+
+ramesh=goa()
+suresh=goa()
+print(ramesh.beach())
+suresh.party()
+ramesh.name='ramy'
+print(ramesh.name)
+suresh.name="surya"
+print(suresh.name)
+ramesh.drink="im not drink"
+suresh.drink='im drink'
+print(ramesh.drink)
+print(suresh.drink)
+
+class laptop():
+    price=1512
+    processor=''
+    ram=''
+
+hp=laptop()
+print(hp.price)
+
+hp.price=50000
+hp.processor='intel'
+hp.ram='6Gb'
+
+dell=laptop()
+dell.ram='5Gb'
+dell.price=40000
+dell.processor='ryzen'
+
+print(dell.price)
+print(hp.price)
+print(dell.processor)
+print(hp.processor)
+print(dell.ram)
+print(hp.ram)
+
+class laptop():
+    def __init__(self):
+        self.price=0
+        self.ram=""
+        self.processor=''
+    def display(self):
+        print("ram in :" , self.ram)
+        print("processor is :" , self.processor)
+        
+
+hp=laptop()
+print(hp.price)
+hp.price=30000
+print(hp.price)
+dell=laptop()
+dell.ram='8gb'
+dell.processor='i7'
+hp.ram='5gb'
+hp.processor='i5'
+print(hp.ram)
+hp.display()
+dell.display()
+
+
+class student():
+    def __init__(self):
+        self.name="name"
+        self.regno="reg.no"
+    def display (self):
+        print("name is :", self.name)
+        print("reg.no is :",self.regno)
+
+ramesh=student()
+suresh=student()
+
+print(suresh.name)
+print(suresh.regno)
+print(ramesh.name)
+print(ramesh.regno)
+
+ramesh.name="ramy"
+ramesh.regno='21001'
+suresh.name="surya"
+suresh.regno=21017
+
+suresh.display()
+ramesh.display()
+
+print(suresh.name)
+print(suresh.regno)
+print(ramesh.name)
+print(ramesh.regno)
+
+
+class fruits():
+    def __init__(self):
+        self.name="something"
+        self.colour='some'
+    def display (self):
+        print("fruit name is :" , self.name)
+        print("fruit colour is :", self.colour)
+
+apple=fruits()
+apple.name="Apple"
+apple.colour="Red"
+apple.display()
+
+class fruits():
+    def __init__(self,color):
+        self.colour= color
+    
+apple=fruits('red')
+print(apple.colour)
+
+class teacher():
+    def __init__(self,name,regno):
+        self.name=name
+        self.regno=regno
+
+    def display(self):
+        print("name is :", self.name)
+        print("reg no is :", self.regno)
+
+t1=teacher('sabi',17)
+t2=teacher('main',12)
+
+t1.display()
+t2.display()
+
+
+
+class library():
+    def __init__(self,books):
+        self.books=books
+    def list_books (self):
+        print("Available Books")
+        for book in self.books:
+            print(book)
+
+    def borrow_book(self,borrow_book):
+        if borrow_book in self.books:
+            print("YES Available")
+            self.books.remove(borrow_book)
+        else:
+            print("not present")
+    
+    def return_book(self,return_book):
+        print("book was placed")
+        self.books.append(return_book)
+
+books=['python','c','c++']
+user1=library(books)
+
+msg="""
+    1.Display books
+    2.borrow books
+    3.Returen books
+"""
+while(True):
+    print(msg)
+    ch=int(input("enter your choosen boook :"))
+    if ch==1:
+        user1.list_books()
+    
+    elif ch==2:
+        book=input("enter book to borrow  :")
+        user1.borrow_book(book)
+    elif ch==3:
+        book=input("enter the book to return :")
+        user1.return_book(book)
+    else:
+        print("thank you meet you again")
+        quit()
+
+
+class Nokia():
+    name='nokia'
+    year='1993'
+
+    def contact_details(self):
+        print('rayapalayam road erode')
+
+class Nokia1100(Nokia):
+    def __init__(self):
+        self.brand='NOKIA'
+        self.state='tamil nadu'
+
+    def come (self):
+        print("phone name is : ",self.name)
+        print(" brand name is : ",self.brand)
+        print("production year:",self.year)
+        print("location: ",self.state)
+
+aks=Nokia1100()
+aks.come()
+
