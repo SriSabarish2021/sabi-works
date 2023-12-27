@@ -1,0 +1,18 @@
+'''name=input("Enter your name: ")
+age=int(input("enter your age : "))
+print("your name is : ",name)
+print("age is : ",age)
+a=int(input("enter A value: "))
+b=int(input("enter B value: "))
+c=int(input("enter C value: "))
+multi= a*b*c
+add= a+b+c
+print("multiply value is : ",multi)
+print("added value is : ",add)
+print("divide value is :",multi/add)'''
+
+rcb="loose"
+if rcb == "loose":
+    print("True")
+else:
+    print("False")

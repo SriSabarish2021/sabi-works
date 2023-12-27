@@ -407,7 +407,7 @@ class lap(service):
 
 gaming=lap()
 gaming.lapp()
-'''
+
 
 class dad():
     def money(self):
@@ -421,3 +421,93 @@ class son3():
 
 s3=dad()
 s3.money()
+
+
+class a():
+    def __init__(self):
+        print('a')
+    def display(self):
+        print("this us A ")
+class b():
+    def __init__(self):
+        super().display()
+        print('b')
+    def display(self):
+        print("this us B ")
+class c(b,a):
+    def __init__(self):
+        super().__init__()
+        print('c')
+    def display(self):
+        print("this us C ")
+man=c()
+
+def add(a=8):
+    print(a)
+a=add()
+
+
+class animal:
+    def sound(self):
+        print("animal makes a sound")
+class dog(animal):
+    def sound(self):
+        print("dog barks")
+class bird(animal):
+    def sound(self):
+        print("bird sings")
+
+man=animal()
+man.sound()
+
+class shape():
+    def area(self):
+        print('0')
+class rectangle(shape):
+    def area(self):
+        print("area of rect")
+
+man=rectangle()
+man.area()
+
+class person():
+    def __init__(self,name):
+        self.name=name
+class student(person):
+    def __init__(self,name,grade):
+        super().__init__(name)
+        self.grade=grade
+    def display(self):
+        print(self.name,self.grade)
+      
+mani=student('num','a')
+mani.display()
+
+class vehicle():
+    def start(self):
+        print("vehicle started")
+class car(vehicle):
+    def start(self):
+        print("car started")
+new=car()
+new.start()
+
+class employee():
+    def __init__(self,name,salary):
+       self.name=name
+       self.salary=salary
+class manager(employee):
+    def __init__(self,name,salary,department):
+        super().__init__(name,salary)
+        self.department=department
+    def display(self):
+        print(self.name,self.salary,self.department)
+
+man=manager('mani','2000','A')
+
+man.display()'''
+
+
+
+
+
